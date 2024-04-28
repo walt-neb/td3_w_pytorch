@@ -1,0 +1,15 @@
+<mujoco model="rook">
+  <asset>
+    <mesh file="meshes/rook.stl" name="rook_mesh" scale="0.001 0.001 0.001"/>
+    <texture file="../textures/chess_texture.png" type="2d" name="tex-rook" />
+    <material name="mat-rook" reflectance="0.2" texrepeat="1 1" texture="tex-rook" texuniform="true"/>
+  </asset>
+  <worldbody>
+    <body>
+      <body name="object">
+        <geom pos="0 0 0" mesh="rook_mesh" type="mesh" solimp="0.998 0.998 0.001" solref="0.001 1" density="5000" friction="0.5 0.3 0.1" material="mat-rook" group="0" condim="4"/>
+      </body>
+      <site rgba="0 0 0 0" size="0.005" pos="0 0 0" name="rook_site"/>
+    </body>
+  </worldbody>
+</mujoco>
